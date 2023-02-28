@@ -1,6 +1,6 @@
 # Swift Apprentice: Fundamentals: Materials
 
-This repo contains all the downloadable materials and projects associated with the **[Swift Apprentice](https://www.kodeco.com/books/swift-apprentice-fundamentals)** from [Kodeco](https://www.kodeco.com).
+This repo contains all the downloadable materials and projects associated with the **[Swift Apprentice: Fundamentals](https://www.kodeco.com/books/swift-apprentice-fundamentals)** from [Kodeco](https://www.kodeco.com).
 
 Each edition has its own branch, named `editions/[EDITION]`. The default branch for this repo is for the most recent edition.
 
