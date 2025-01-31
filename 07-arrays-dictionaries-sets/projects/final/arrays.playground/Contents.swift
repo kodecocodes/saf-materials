@@ -195,3 +195,6 @@ func sumOfElements(in array: [Int]) -> Int {
 
 print(sumOfElements(in: scores))
 // > 22
+
+print(players.count(where: { $0.hasPrefix("D") }))
+// > 2
