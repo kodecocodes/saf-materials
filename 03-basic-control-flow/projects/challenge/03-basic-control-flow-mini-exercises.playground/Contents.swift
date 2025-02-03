@@ -35,7 +35,7 @@
  ### BOOLEAN LOGIC
  Create a constant called `myAge` and set it to your age. Then, create a constant called `isTeenager` that uses Boolean logic to determine if the age denotes someone in the age range of 13 to 19.
  */
-let myAge = 30
+let myAge = 19
 let isTeenager = myAge >= 13 && myAge <= 19
 
 /*:
@@ -43,6 +43,7 @@ let isTeenager = myAge >= 13 && myAge <= 19
  */
 let theirAge = 30
 let bothTeenagers = (theirAge >= 13 && theirAge <= 19) && isTeenager
+let eitherTeenagers = (theirAge >= 13 && theirAge <= 19) || isTeenager
 
 /*:
  Create a constant called reader and set it to your name as a `String`. Create a constant called author and set it to my name, Matt Galloway. Create a constant called `authorIsReader` that uses string equality to determine if reader and author are equal.
