@@ -37,7 +37,7 @@ for char in string {
 }
 
 let stringLength = string.count
-//let fourthChar = string[3] // error: 'subscript' is unavailable: cannot subscript String with an Int, see the documentation comment for discussion
+//let fourthChar = string[3] // error: 'subscript' is unavailable: cannot subscript String with an Int, use a String.Index instead.
 
 
 // GRAPHEME CLUSTERS
