@@ -43,3 +43,22 @@ if let song = myFavoriteSong {
 } else {
   print("I don’t have a favorite song.")
 }
+
+
+// GUARD
+func printError(code: Int?) {
+  guard let code else {
+    print("No error.")
+    return
+  }
+
+  guard code < 0 else {
+    print("Invalid code.")
+    return
+  }
+
+  print("\(code)")
+}
+printError(code: nil)
+printError(code: 1234)
+printError(code: -1234)
