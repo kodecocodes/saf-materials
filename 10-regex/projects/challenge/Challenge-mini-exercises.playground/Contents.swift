@@ -32,7 +32,7 @@
 
 /*: ## Mini-Exercises
 
- Now that you've learned how to construct regular expressions with some different capabilities, how would you adapt `/[a-z]+[0-9]+/` from earlier to match all of the example texts `abcd12345`, `swiftapprentice2023`, `XYZ567`, `Pennsylvania65000`?
+ Now that you've learned how to construct regular expressions with some different capabilities, how would you adapt `/[a-z]+[0-9]+/` from earlier to match all of the example texts `abcd12345`, `swiftapprentice2025`, `XYZ567`, `Pennsylvania65000`?
 
  */
 
