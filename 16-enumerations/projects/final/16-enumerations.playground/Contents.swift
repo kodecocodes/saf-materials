@@ -113,7 +113,7 @@ enum WithdrawalResult {
   case error(message: String)
 }
 
-func withdraw(amount: Int) -> WithdrawalResult {
+@MainActor func withdraw(amount: Int) -> WithdrawalResult {
   if amount <= balance {
     balance -= amount
     return .success(newBalance: balance)
