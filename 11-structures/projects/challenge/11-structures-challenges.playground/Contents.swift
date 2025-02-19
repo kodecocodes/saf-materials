@@ -68,7 +68,7 @@ var totalProcessedWeight = 0
 // It processes each fruit independently to
 // check what kind of fruit it is and
 // place each one into the correct inventory container
-func receive(_ truck: [Fruit]) {
+@MainActor func receive(_ truck: [Fruit]) {
   for fruit in truck {
     switch fruit.kind {
     case "Pear":
