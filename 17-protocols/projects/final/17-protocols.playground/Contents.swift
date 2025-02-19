@@ -131,10 +131,6 @@ class BitcoinAccount: Account {
   }
 }
 
-let accountType: Account.Type = BitcoinAccount.self
-let account = accountType.init(initialAmount: 30.00)
-let transferAccount = accountType.init(transferAccount: account)!
-
 protocol WheeledVehicle: Vehicle {
   var numberOfWheels: Int { get }
   var wheelSize: Double { get }
