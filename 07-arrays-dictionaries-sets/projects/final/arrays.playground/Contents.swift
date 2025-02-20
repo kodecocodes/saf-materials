@@ -93,12 +93,7 @@ let upcomingPlayersArray = Array(players[1...2])
 print(upcomingPlayersArray[0], upcomingPlayersArray[1])
 // > "Bob Cindy"
 
-
-func isEliminated(player: String) -> Bool {
-  !players.contains(player)
-}
-
-print(isEliminated(player: "Bob"))
+print(!players.contains("Bob"))
 // > false
 
 print(players[1...3].contains("Bob"))
