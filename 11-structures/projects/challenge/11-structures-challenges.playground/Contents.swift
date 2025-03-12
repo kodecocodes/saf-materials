@@ -69,11 +69,6 @@ var totalProcessedWeight = 0
 // check what kind of fruit it is and
 // place each one into the correct inventory container
 
-/*:
-> **Note**: The addition of `@MainActor` here is just to keep the Swift 6 compiler quiet. You'll learn all about thread safety and actors in the chapter on Concurrency. Its needed here because of how Playgrounds get compiled.
-*/
-
-@MainActor func receive(_ truck: [Fruit]) {
   for fruit in truck {
     switch fruit.kind {
     case "Pear":
@@ -88,9 +83,9 @@ var totalProcessedWeight = 0
     
     totalProcessedWeight += fruit.weight
   }
-}
 
-receive(truck)
+
+
 
 print("Total weight:", totalProcessedWeight, "grams", "\n---")
 print("Quantity of pears:\t\t", pears.count)
