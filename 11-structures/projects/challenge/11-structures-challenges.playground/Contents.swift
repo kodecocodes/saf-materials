@@ -1,4 +1,4 @@
-/// Copyright (c) 2023 Kodeco LLC
+/// Copyright (c) 2025 Kodeco Inc
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -68,7 +68,7 @@ var totalProcessedWeight = 0
 // It processes each fruit independently to
 // check what kind of fruit it is and
 // place each one into the correct inventory container
-func receive(_ truck: [Fruit]) {
+
   for fruit in truck {
     switch fruit.kind {
     case "Pear":
@@ -83,14 +83,15 @@ func receive(_ truck: [Fruit]) {
     
     totalProcessedWeight += fruit.weight
   }
-}
 
-receive(truck)
+
+
 
 print("Total weight:", totalProcessedWeight, "grams", "\n---")
 print("Quantity of pears:\t\t", pears.count)
 print("Quantity of apples:\t\t", apples.count)
 print("Quantity of oranges:\t", oranges.count, "\n")
+
 /*:
  ### Challenge 2
  Create a T-shirt structure that has size, color and material options. Provide a method to calculate the cost of a shirt based on its attributes.
