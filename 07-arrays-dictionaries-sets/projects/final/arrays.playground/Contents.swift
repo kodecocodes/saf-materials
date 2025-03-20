@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023 Kodeco Inc.
+ * Copyright (c) 2025 Kodeco Inc.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -93,12 +93,7 @@ let upcomingPlayersArray = Array(players[1...2])
 print(upcomingPlayersArray[0], upcomingPlayersArray[1])
 // > "Bob Cindy"
 
-
-func isEliminated(player: String) -> Bool {
-  !players.contains(player)
-}
-
-print(isEliminated(player: "Bob"))
+print(!players.contains("Bob"))
 // > false
 
 print(players[1...3].contains("Bob"))
@@ -195,3 +190,6 @@ func sumOfElements(in array: [Int]) -> Int {
 
 print(sumOfElements(in: scores))
 // > 22
+
+print(players.count(where: { $0.hasPrefix("D") }))
+// > 2
