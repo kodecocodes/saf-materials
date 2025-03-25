@@ -70,7 +70,7 @@ let sally = Keeper(name: "Sally", morningCare: Dog(name: "Benji"), afternoonCare
 // let caroline = Keeper(name: "Caroline", morningCare: Dog(name: "Mattie"), afternoonCare: Cat(name: "Dexter"))
 
 /*
- The error we get is the following: Conflicting arguments to generic parameter 'Animal' ('Dog' vs 'Cat').
+ The error we get is the following: conflicting arguments to generic parameter 'Animal' ('Dog' vs 'Cat').
 
  This is exactly what we'd expect. Swift needs the generic parameter `Animal` to take one type, so there is a conflict if `morningCare` parameter and the `afternoonCare` parameter expect different types.
 */
