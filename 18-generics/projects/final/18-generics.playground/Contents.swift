@@ -48,6 +48,13 @@ let dogKeeper = KeeperKind(keeperOf: .dog)
 
 // types driving types
 
+// Note: For try 1 and try 2, you will need to comment out all of the code for
+// for the other tries and the subsequent code.
+// This is because the playground environment does not strictly read only the executed code,
+// so it will look at subsequenc type definitions when trying to do type inference, and
+// show you errors unrelated to what you have executed.
+
+
 /* try 1: manually mirrored types
 class Cat {}
 class Dog {}
