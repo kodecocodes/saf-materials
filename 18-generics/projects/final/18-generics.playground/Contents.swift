@@ -152,10 +152,10 @@ extension Cat: Meowable {
 }
 
 // Generic return types
-let lost: [any Pet] = [Cat(name: "Whiskers"), Dog(name: "Hachiko")]
+let lostPets: [any Pet] = [Cat(name: "Whiskers"), Dog(name: "Hachiko")]
 
 /// Return a lost Cat.
-func findLostCat(name: String) -> Cat? {
+func findLostCat(name: String, among lost: [any Pet]) -> Cat? {
   lost.lazy.compactMap {
     $0 as? Cat
   }.first {
@@ -163,11 +163,11 @@ func findLostCat(name: String) -> Cat? {
   }
 }
 
-func findLostPet(name: String) -> (any Pet)? {
+func findLostPet(name: String, among lost: [any Pet]) -> (any Pet)? {
   lost.first { $0.name == name}
 }
 
-//func findLost<Animal: Pet>(_ petType: Animal.Type, name: String) -> (some Pet)? {
+//func findLost<Animal: Pet>(_ petType: Animal.Type, name: String, among lost: [any Pet]) -> (some Pet)? {
 //  lost.lazy.compactMap {
 //    $0 as? Animal
 //  }.first {
@@ -175,7 +175,7 @@ func findLostPet(name: String) -> (any Pet)? {
 //  }
 //}
 
-func findLost<Animal: Pet>(_ petType: Animal.Type, name: String) -> Animal? {
+func findLost<Animal: Pet>(_ petType: Animal.Type, name: String, among lost: [any Pet]) -> Animal? {
   lost.lazy.compactMap {
     $0 as? Animal
   }.first {
@@ -183,8 +183,8 @@ func findLost<Animal: Pet>(_ petType: Animal.Type, name: String) -> Animal? {
   }
 }
 
-findLost(Cat.self, name: "Whiskers")?.meow()
-findLost(Dog.self, name: "Hachiko")
+findLost(Cat.self, name: "Whiskers", among: lostPets)?.meow()
+findLost(Dog.self, name: "Hachiko", among: lostPets)
 
 extension Array: Meowable where Element: Meowable {
   func meow() {
