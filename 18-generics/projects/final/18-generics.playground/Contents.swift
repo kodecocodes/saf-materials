@@ -1,4 +1,4 @@
-/// Copyright (c) 2023 Kodeco LLC
+/// Copyright (c) 2025 Kodeco LLC
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -47,6 +47,15 @@ let catKeeper = KeeperKind(keeperOf: .cat)
 let dogKeeper = KeeperKind(keeperOf: .dog)
 
 // types driving types
+
+// Note: For try 1 and try 2, you will need to comment out the code for
+// for the other tries and even subsequent code.
+//
+// This is because the playground environment does not strictly read only
+// the executed code, so it will look at subsequenc type definitions when
+// trying to do type inference, and show you errors based on reading even
+// what you have not executed.
+
 
 /* try 1: manually mirrored types
 class Cat {}
@@ -145,10 +154,10 @@ extension Cat: Meowable {
 }
 
 // Generic return types
-let lost: [any Pet] = [Cat(name: "Whiskers"), Dog(name: "Hachiko")]
+let lostPets: [any Pet] = [Cat(name: "Whiskers"), Dog(name: "Hachiko")]
 
 /// Return a lost Cat.
-func findLostCat(name: String) -> Cat? {
+func findLostCat(name: String, among lost: [any Pet]) -> Cat? {
   lost.lazy.compactMap {
     $0 as? Cat
   }.first {
@@ -156,11 +165,11 @@ func findLostCat(name: String) -> Cat? {
   }
 }
 
-func findLostPet(name: String) -> (any Pet)? {
+func findLostPet(name: String, among lost: [any Pet]) -> (any Pet)? {
   lost.first { $0.name == name}
 }
 
-//func findLost<Animal: Pet>(_ petType: Animal.Type, name: String) -> (some Pet)? {
+//func findLost<Animal: Pet>(_ petType: Animal.Type, name: String, among lost: [any Pet]) -> (some Pet)? {
 //  lost.lazy.compactMap {
 //    $0 as? Animal
 //  }.first {
@@ -168,7 +177,7 @@ func findLostPet(name: String) -> (any Pet)? {
 //  }
 //}
 
-func findLost<Animal: Pet>(_ petType: Animal.Type, name: String) -> Animal? {
+func findLost<Animal: Pet>(_ petType: Animal.Type, name: String, among lost: [any Pet]) -> Animal? {
   lost.lazy.compactMap {
     $0 as? Animal
   }.first {
@@ -176,8 +185,8 @@ func findLost<Animal: Pet>(_ petType: Animal.Type, name: String) -> Animal? {
   }
 }
 
-findLost(Cat.self, name: "Whiskers")?.meow()
-findLost(Dog.self, name: "Hachiko")
+findLost(Cat.self, name: "Whiskers", among: lostPets)?.meow()
+findLost(Dog.self, name: "Hachiko", among: lostPets)
 
 extension Array: Meowable where Element: Meowable {
   func meow() {
