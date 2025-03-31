@@ -1,4 +1,4 @@
-/// Copyright (c) 2023 Kodeco LLC
+/// Copyright (c) 2025 Kodeco Inc.
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -32,7 +32,7 @@
 
 /*: ## Mini-Exercises
 
- Now that you've learned how to construct regular expressions with some different capabilities, how would you adapt `/[a-z]+[0-9]+/` from earlier to match all of the example texts `abcd12345`, `swiftapprentice2023`, `XYZ567`, `Pennsylvania65000`?
+ Now that you've learned how to construct regular expressions with some different capabilities, how would you adapt `/[a-z]+[0-9]+/` from earlier to match all of the example texts `abcd12345`, `swiftapprentice2025`, `XYZ567`, `Pennsylvania65000`?
 
  */
 

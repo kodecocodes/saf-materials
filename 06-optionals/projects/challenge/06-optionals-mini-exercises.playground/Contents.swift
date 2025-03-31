@@ -1,4 +1,4 @@
-/// Copyright (c) 2023 Kodeco LLC
+/// Copyright (c) 2025 Kodeco LLC
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -43,3 +43,22 @@ if let song = myFavoriteSong {
 } else {
   print("I don’t have a favorite song.")
 }
+
+
+// GUARD
+func printError(code: Int?) {
+  guard let code else {
+    print("No error.")
+    return
+  }
+
+  guard code < 0 else {
+    print("Invalid code.")
+    return
+  }
+
+  print("\(code)")
+}
+printError(code: nil)
+printError(code: 1234)
+printError(code: -1234)

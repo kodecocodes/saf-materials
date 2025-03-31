@@ -1,4 +1,4 @@
-/// Copyright (c) 2023 Kodeco LLC
+/// Copyright (c) 2025 Kodeco Inc.
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -130,10 +130,6 @@ class BitcoinAccount: Account {
     value = transferAccount.value
   }
 }
-
-let accountType: Account.Type = BitcoinAccount.self
-let account = accountType.init(initialAmount: 30.00)
-let transferAccount = accountType.init(transferAccount: account)!
 
 protocol WheeledVehicle: Vehicle {
   var numberOfWheels: Int { get }
